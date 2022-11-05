@@ -18,7 +18,7 @@ class PokemonsViewHolder(
 
     fun bind(pokemon: GetAllPokemonsQuery.Result) {
         textNameCharacter.text = pokemon.name
-        imagePokemon.load(pokemon.url) {
+        imagePokemon.load(pokemon.image) {
             crossfade(true)
             transformations(CircleCropTransformation())
         }
