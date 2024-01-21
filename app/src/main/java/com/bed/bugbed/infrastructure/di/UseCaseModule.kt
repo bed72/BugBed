@@ -1,8 +1,10 @@
 package com.bed.bugbed.infrastructure.di
 
-import com.bed.bugbed.data.usecases.RemoteGetAllPokemonUseCase
-import com.bed.bugbed.domain.usecases.GetAllPokemonsUseCase
 import org.koin.dsl.module
+
+import com.bed.bugbed.domain.usecases.GetAllPokemonsUseCase
+
+import com.bed.bugbed.data.usecases.RemoteGetAllPokemonUseCase
 
 val useCaseModule = module {
     single<GetAllPokemonsUseCase> {

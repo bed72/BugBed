@@ -1,10 +1,13 @@
 package com.bed.bugbed.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.Observer
+
+import androidx.appcompat.app.AppCompatActivity
+
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
 import com.bed.bugbed.databinding.ActivityHomeBinding
+
 import com.bed.bugbed.presentation.adapter.PokemonsAdapter
 
 class HomeActivity : AppCompatActivity() {
@@ -24,7 +27,6 @@ class HomeActivity : AppCompatActivity() {
         pokemonsAdapter = PokemonsAdapter()
 
         with(binding.recyclerPokemons) {
-            setHasFixedSize(true)
             adapter = pokemonsAdapter
         }
     }
@@ -35,8 +37,8 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun observeEvents() {
-        viewModel.pokemonsLiveData.observe(this, Observer { pokemons ->
+        viewModel.pokemonsLiveData.observe(this) { pokemons ->
             pokemonsAdapter.submitList(pokemons)
-        })
+        }
     }
 }

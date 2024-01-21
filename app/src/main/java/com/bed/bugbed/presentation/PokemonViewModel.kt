@@ -1,15 +1,21 @@
 package com.bed.bugbed.presentation
 
+import android.util.Log
+
+import java.lang.Exception
+
+import kotlinx.coroutines.launch
+
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.MutableLiveData
+
 import com.bed.bugbed.GetAllPokemonsQuery
+
 import com.bed.bugbed.data.models.DataModel
+
 import com.bed.bugbed.domain.usecases.GetAllPokemonsUseCase
-import kotlinx.coroutines.launch
-import timber.log.Timber
-import java.lang.Exception
 
 class PokemonViewModel(
     private val pokemonsUseCase: GetAllPokemonsUseCase
@@ -36,6 +42,6 @@ class PokemonViewModel(
     }
 
     private fun handleException(exception: Exception) {
-        Timber.tag("ERROR: $exception")
+        Log.d("ERROR", exception.message.toString())
     }
 }

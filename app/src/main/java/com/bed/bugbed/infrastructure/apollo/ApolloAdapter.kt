@@ -1,9 +1,12 @@
 package com.bed.bugbed.infrastructure.apollo
 
 import com.apollographql.apollo3.ApolloClient
+
 import com.bed.bugbed.GetAllPokemonsQuery
-import com.bed.bugbed.data.models.DataModel
+
 import com.bed.bugbed.domain.functional.Either
+
+import com.bed.bugbed.data.models.DataModel
 import com.bed.bugbed.data.apollo.ApolloClient as CustomApolloClient
 
 class ApolloAdapter(

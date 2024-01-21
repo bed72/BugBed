@@ -1,13 +1,16 @@
 package com.bed.bugbed.presentation.viewholder
 
-import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.LayoutInflater
+
 import androidx.recyclerview.widget.RecyclerView
+
 import coil.load
 import coil.transform.CircleCropTransformation
-import com.bed.bugbed.GetAllPokemonsQuery
-import com.bed.bugbed.databinding.ItemPokemonBinding
 
+import com.bed.bugbed.GetAllPokemonsQuery
+
+import com.bed.bugbed.databinding.ItemPokemonBinding
 
 class PokemonsViewHolder(
     itemPokemonBinding: ItemPokemonBinding

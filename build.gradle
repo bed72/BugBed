@@ -1,21 +1,15 @@
 buildscript {
     ext {
-        koin_version= "3.2.2"
-        kotlin_version = '1.7.20'
-        apollo_version = '3.0.0'
-        navigation_version = '2.5.0-alpha01'
-        coroutines_version  = '1.6.4'
+        apollo_version = "3.8.2"
+        kotlin_version = "1.9.22"
+        lifecycle_version = "2.7.0"
     }
 }
 
 plugins {
-    id 'com.android.library' version '7.3.1' apply false
-    id 'com.android.application' version '7.3.1' apply false
-    id 'org.jetbrains.kotlin.android' version '1.7.20' apply false
+    id "com.android.application" version "8.2.1" apply false
 
-    id 'com.apollographql.apollo3' version "$apollo_version" apply false
-}
+    id "com.apollographql.apollo3" version "$apollo_version" apply false
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+    id "org.jetbrains.kotlin.android" version "$kotlin_version" apply false
 }
